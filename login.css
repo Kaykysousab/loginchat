@@ -1,0 +1,143 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./img/fundo.png');
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: transparent;
+    border: 1px solid #013235e7;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(4, 67, 135, 0.981);
+    width: 300px;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.container:hover {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+   100% {
+    filter: hue-rotate(300deg);
+   }
+}
+
+.meubot {
+    margin-bottom: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: rgb(228, 234, 234);
+}
+
+::placeholder {
+    color: #fffafa; /* Cor desejada para o texto temporário */
+}
+
+.cor {
+    color: #000000;
+    font-size: 18px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid #000;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+button {
+    background-color: #069555;
+    color: rgb(231, 225, 225);
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid #1a1b1ab6;
+}
+
+.geradasenha {
+    justify-content: flex-start;
+    display: flex;
+    font-size: 20px;
+    color: white;
+
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+button:hover {
+    background-color: #031b32af;
+}
+
+/* Estilo para dispositivos móveis */
+@media only screen and (max-width: 767px) {
+    body {
+        background-image: url('./img/fundomobile.jpg'); /* Define a imagem de fundo para dispositivos móveis */
+        background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+        /* Outros estilos específicos para dispositivos móveis, se necessário */
+    }
+    .container {
+        background-color: transparent;
+        border: 1px solid #012d2f64;
+        padding: 20px;
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+    }   
+}
+
+/* Estilo para desktops */
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url('./img/fundo.png'); /* Define a imagem de fundo para desktops */
+        background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+        /* Outros estilos específicos para desktops, se necessário */
+    } 
+}
